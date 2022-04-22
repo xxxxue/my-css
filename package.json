@@ -1,0 +1,49 @@
+{
+  "name": "my-next-css",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "out": "next build && next export",
+    "up": "yarn upgrade-interactive",
+    "upl": "yarn upgrade-interactive --latest",
+    "pre": "prettier --write ./src/**/**.{js,jsx,tsx,ts,css}",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "classnames": "^2.3.1",
+    "daisyui": "^2.13.6",
+    "next": "12.1.4",
+    "react": "17",
+    "react-dom": "17"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "@types/react": "17",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.7",
+    "postcss": "^8.4.8",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "styled-jsx-plugin-postcss": "^4.0.1",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss": "^3.0.23",
+    "typescript": "4.6.3"
+  }
+}
